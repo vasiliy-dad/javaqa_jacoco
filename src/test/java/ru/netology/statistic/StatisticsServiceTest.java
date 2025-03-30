@@ -20,4 +20,19 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void shouldFindMaxIncomeSecondCellMore() {
+        StatisticsService service = new StatisticsService();
+
+
+        long[] incomesInBillions = {12, 13, 8, 4, 5, 3, 8, 6, 11, 11, 12};
+        long expected = 13;
+
+
+        long actual = service.findMax(incomesInBillions);
+
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
